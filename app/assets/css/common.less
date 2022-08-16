@@ -1,0 +1,275 @@
+@import "./color.less";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+img {
+  border: 0 none;
+}
+
+p {
+  margin: 0;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+a,
+button,
+input,
+select,
+li {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+span {
+  word-break: break-all;
+}
+
+input,
+textarea {
+  -webkit-appearance: none;
+  resize: none;
+  border: none;
+}
+
+a:focus,
+input:focus,
+img:focus,
+button:focus,
+textarea:focus,
+select:focus,
+li:focus {
+  outline: none;
+}
+
+//长按不出现放大镜效果
+button,
+input[type='button'] {
+  border: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.clearfix-h20 {
+  clear: both;
+  height: 0;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: 201;
+}
+
+//常规面包屑
+.ant-breadcrumb {
+  margin: 12px 0;
+}
+
+//card顶部面包屑
+.ant-card {
+  .ant-card-head-title {
+    .ant-breadcrumb {
+      margin: 0;
+      padding-left: 10px;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 3px;
+        height: 22px;
+        left: 0;
+        background: @primary-color;
+      }
+    }
+  }
+
+  .ant-card-body {
+    .block-title {
+      font-size: 14px;
+      height: 14px;
+      line-height: 14px;
+      padding-left: 10px;
+      margin: 16px 0;
+      font-weight: 500;
+      border-left: 3px solid @primary-color;
+    }
+
+    //label左侧对齐，暂不启用
+    //.ant-form-item-label {
+    //  text-align: left;
+    //}
+  }
+}
+
+.ant-layout {
+  p {
+    margin: 0;
+  }
+}
+
+table {
+  thead {
+    th {
+      text-align: center !important;
+    }
+  }
+
+  tbody {
+    .txt-center {
+      text-align: center !important;
+    }
+
+    .txt-right {
+      text-align: right !important;
+    }
+
+    .txt-left {
+      text-align: left !important;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      background: @font-light;
+      border-radius: 100%;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+.dialog-qrcode {
+  position: relative;
+  width: 300px;
+  height: 300px;
+
+  .qrcode {
+    width: 285px;
+    height: 285px;
+  }
+
+  .img {
+    position: absolute;
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 6px;
+    left: 120px;
+    top: 120px;
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+    }
+  }
+}
+
+.qrcode-wrap {
+  display: flex;
+
+  .qrcode-input {
+    flex: 1;
+  }
+
+  .qrcode-copy {
+    width: 40px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+    color: #1890FF
+  }
+
+}
+
+.ant-alert-warning {
+  border: 1px solid #f7c580;
+  background-color: #fcebd1;
+
+  .ant-alert-message {
+    color: #885526;
+  }
+}
+
+.ant-transfer {
+  .ant-btn {
+    margin-left: 0;
+  }
+}
+
+.font-red {
+  color: red !important;
+}
+
+.font-gray {
+  color: @font-light !important;
+}
+
+.font-orange {
+  color: @orange !important;
+}
+
+
+.dangerous-content-block {
+  width: 100%;
+  line-height: 25px;
+
+  img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 750px !important;
+  }
+}
+
+.upload-img-preview {
+  float: left;
+  border: 1px solid @line-grey;
+  border-radius: 4px;
+  overflow: hidden;
+  background: url("../image/common/upload_icon.png") center no-repeat;
+  background-size: 36px;
+  position: relative;
+
+  img {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+  }
+
+  .icon-remove {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    z-index: 2;
+  }
+}
+
+.upload-img-tip {
+  float: right;
+}

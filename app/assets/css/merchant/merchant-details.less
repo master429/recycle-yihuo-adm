@@ -1,0 +1,74 @@
+@import '../color.less';
+
+#div-modal-merchant-details {
+    .top {
+        display: flex;
+        width: 100%;
+        height: 125px;
+
+        .logo {
+            flex: 0 0 120px;
+            display: flex;
+            width: 120px;
+            height: 120px;
+            align-items: center;
+
+            img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        .summary {
+            flex: 1;
+            margin-top: -2px;
+            margin-left: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .line {
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+                label {
+                    display: inline-block;
+                    position: relative;
+                    width: 85px;
+                    text-align: justify;
+                    text-align-last: justify;
+                    margin-right: 15px;
+
+                    &::after {
+                        position: absolute;
+                        content: "\FF1A";
+                        right: -15px;
+                    }
+                }
+
+                .line-time {
+                    display: inline-block;
+
+                    p {
+                        display: inline-block;
+                    }
+                }
+
+                span {
+                    position: absolute;
+                    right: 0;
+                    cursor: pointer;
+                    color: @red;
+
+                    &:hover {
+                        color: rgba(@red, .85);
+                    }
+                }
+
+            }
+        }
+    }
+}

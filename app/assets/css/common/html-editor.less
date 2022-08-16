@@ -1,0 +1,73 @@
+@import "../color";
+
+.html-editor {
+  a[href*="https://www.froala.com/wysiwyg-editor"] {
+    opacity: 0 !important;
+    height: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  a[href*=" froala.com/wysiwyg-editor"] {
+    opacity: 0 !important;
+    height: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .fr-box {
+    .fr-basic .fr-element p {
+      margin: 0;
+
+      span {
+        line-height: 150%;
+      }
+    }
+  }
+
+  .fr-toolbar {
+    border-top: none;
+  }
+
+  .cz-addon {
+    position: absolute;
+    right: -120px;
+    top: 0;
+
+    li {
+      width: 120px;
+      margin-bottom: 7px;
+      height: 28px;
+      line-height: 28px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 0 14px 14px 0;
+
+      i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin: 0 7px -4px 7px
+      }
+
+      a {
+        color: #fff;
+      }
+    }
+
+    .xiumi {
+      i {
+        background: url("../../image/common/icon_xiumi.png") no-repeat;
+        background-size: contain;
+      }
+    }
+
+    .wx {
+      i {
+        background: url("../../image/common/icon_wx.png") no-repeat;
+        background-size: contain;
+      }
+    }
+
+  }
+
+}

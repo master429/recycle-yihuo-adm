@@ -1,0 +1,46 @@
+@import '../color.less';
+
+.merchants {
+    .ant-btn {
+        border-radius: 4px;
+    }
+
+    .ant-table-wrapper {
+        margin-top: 20px;
+    }
+
+    .overdue {
+        color: @red;
+    }
+
+    .halt {
+        color: @primary-color;
+    }
+
+    .search-bar {
+        float: right;
+        display: flex;
+
+        .ant-select {
+            flex: 0 0 80px;
+            width: 80px;
+
+            .ant-select-selector {
+                border-radius: 4px;
+            }
+        }
+
+        .search {
+            flex: 1;
+            margin-left: 10px;
+            min-width: 200px;
+
+            // .anticon-search {
+            //     position: absolute;
+            //     top: 50%;
+            //     right: 12px;
+            //     transform: translateY(-50%);
+            // }
+        }
+    }
+}

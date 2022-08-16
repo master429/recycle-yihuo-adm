@@ -1,0 +1,267 @@
+@import "../color";
+
+.common-list {
+
+  .overall {
+
+    .ant-card-bordered {
+      border: none;
+      margin-bottom: 20px;
+    }
+
+    .ant-card-body {
+      background: @bg-grey;
+    }
+
+    .stat {
+      width: 100%;
+      height: 70px;
+      display: -webkit-flex;
+      -webkit-flex-flow: row;
+
+      li {
+        -webkit-flex: 1;
+        border-right: 1px solid #dfdfdf;
+
+        p {
+          width: 100%;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          font-size: 35px;
+          margin: 0;
+        }
+
+        span {
+          display: block;
+          width: 100%;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+
+    .thin {
+      width: 100%;
+      display: -webkit-flex;
+
+      span {
+        -webkit-flex: 1;
+        display: block;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        text-align: left;
+
+        b {
+          font-size: 20px;
+        }
+      }
+
+      .btn {
+        -webkit-flex: 0 0 100px;
+        margin-left: 30px;
+        background: @primary-color;
+        width: 60px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 6px;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .sub-title {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+  }
+
+  .poster {
+    position: relative;
+    width: 125px;
+    height: 70px;
+
+    .img {
+      position: absolute;
+      width: 125px;
+      height: 70px;
+    }
+
+    .icon {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: 5px;
+      bottom: 5px;
+    }
+  }
+
+  .square-logo,
+  .banner-img,
+  .estate-img,
+  .article-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .simgs {
+    img {
+      float: left;
+      width: 40px;
+      height: 40px;
+      margin: 0 3px;
+      cursor: pointer;
+    }
+  }
+
+  .product-title {
+    height: 60px;
+    line-height: 20px;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    overflow: hidden;
+    display: -webkit-box;
+    white-space: normal !important;
+    width: 100%;
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+
+  }
+
+  .status {
+    position: relative;
+
+    .ant-tag {
+      margin-bottom: 5px;
+    }
+
+    .disabled {
+      color: #a0a0a0;
+    }
+
+    .warning {
+      color: #f89406;
+    }
+
+    .important {
+      color: #ff0000;
+    }
+
+    .primary {
+      color: #428bca;
+      background: none;
+    }
+
+    .twinkle {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin-right: 3px;
+      border-radius: 100%;
+      background: @red;
+      animation: twinkling 2s infinite ease-in-out;
+    }
+
+    @keyframes twinkling {
+      0% {
+        opacity: 0.4;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0.4;
+      }
+    }
+
+  }
+
+  .disabled-bg {
+    color: @font-light;
+  }
+
+  .ant-tag {
+    margin-bottom: 5px;
+  }
+
+  .ant-tabs-nav-container {
+    word-break: break-all;
+  }
+
+}
+
+.modal-scroll-500 {
+  height: 500px;
+
+  .inner {
+    height: 500px;
+    overflow: scroll;
+    width: 100%;
+
+    .state {
+      .warning {
+        color: #f89406;
+      }
+
+      .important {
+        color: #ff0000;
+      }
+    }
+  }
+}
+
+.search-estate-ll {
+  height: 50px;
+  display: flex;
+  padding: 5px;
+
+  .img {
+    flex: 0 0 70px;
+    width: 70px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .name-ll {
+    flex: 1;
+    line-height: 20px;
+    text-align: left;
+
+    p {
+      text-align: left;
+    }
+  }
+
+}
+
+.search-housekeeper-ll {
+  &:extend(.search-estate-ll all);
+
+  .img {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.search-housekeeper-view {
+  &:extend(.search-housekeeper-ll all);
+
+  .name-ll {
+    line-height: 20px;
+  }
+}

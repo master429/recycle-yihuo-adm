@@ -1,0 +1,20 @@
+.header-page {
+  background: #424242;
+  padding: 0;
+  height: 65px;
+
+  .ant-menu-submenu {
+    top: 0;
+  }
+
+  .ant-menu-submenu-horizontal {
+    background: #444;
+    border-bottom: none !important;
+  }
+
+  .ant-menu-submenu-horizontal > .ant-menu {
+    width: 120px;
+    left: -40px;
+  }
+
+}

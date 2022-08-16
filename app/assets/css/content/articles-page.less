@@ -1,0 +1,37 @@
+@import '../color.less';
+
+
+.articles-page {
+    .article-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .article-title {
+        word-wrap: break-word;
+        word-break: break-word;
+        -webkit-line-clamp: 2;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        overflow: hidden;
+        display: -webkit-box;
+        white-space: normal !important;
+        width: 100%;
+        -webkit-box-orient: vertical;
+    }
+}
+
+.article-edit {
+    .upload-img-preview {
+        margin-bottom: 5px;
+        border: 1px solid @line-grey;
+        background: url('../../image/common/upload_icon.png') center no-repeat;
+        background-size: 32px;
+    }
+
+    .upload-img-tip {
+        .ant-btn {
+            width: 120px;
+        }
+    }
+}

@@ -1,0 +1,116 @@
+@import '../color.less';
+
+#div-modal-merchant-renew {
+    .ant-form-item-control-input-content {
+        position: relative;
+
+        .upload-wrapper {
+            width: 100%;
+
+            .ant-spin {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 30px;
+                height: 30px;
+
+                .ant-spin-dot {}
+            }
+
+            .upload-img {
+                position: relative;
+                float: left;
+                margin-right: 5px;
+                margin-bottom: 5px;
+                width: 100px;
+                height: 100px;
+                border-radius: 4px;
+                overflow: hidden;
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                    background: #fff;
+                    border-radius: 4px;
+                }
+
+                &:hover {
+                    .cover {
+                        opacity: 100;
+                    }
+                }
+
+                .cover {
+                    z-index: 2;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    width: 100px;
+                    height: 100px;
+                    opacity: 0;
+                    visibility: none;
+                    background: rgba(0, 0, 0, .3);
+                    transition: opacity .3s;
+
+                    .anticon {
+                        color: #fff;
+                        font-size: 18px;
+                        cursor: pointer;
+                        margin-right: 10px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+
+                &:nth-child(4n) {
+                    margin-right: 0;
+                }
+
+            }
+
+            &:last-child {
+                margin-right: 5px;
+            }
+
+            .upload-img-tip {
+                float: left;
+
+                .ant-btn {
+                    width: 100px;
+                    height: 100px;
+                    padding: 0;
+                    border-radius: 4px;
+                    border: 1px solid @line-grey;
+                    overflow: hidden;
+                    background: url("../../image/common/upload_icon.png") center no-repeat;
+                    background-size: 36px;
+                    box-shadow: none;
+
+                    .file {
+                        z-index: 2;
+                        margin: 0;
+                        padding: 0;
+                        width: 100px;
+                        height: 100px;
+                        cursor: pointer;
+                        border-radius: 4px;
+                        outline: none;
+                        filter: alpha(opacity=0);
+                        opacity: 0;
+                        background: none;
+                        border: none;
+                    }
+                }
+            }
+
+
+        }
+
+        .ant-input-wrapper {}
+
+    }
+}

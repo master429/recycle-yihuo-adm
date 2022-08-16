@@ -1,0 +1,97 @@
+@import "./variables";
+@import "./global";
+@import "./scroll";
+@import "./table";
+@import "./login";
+@import "./icons";
+@import "./button";
+@import "./modal";
+@import "./menu";
+@import "./banner";
+@import "./card";
+@import "./img";
+@import "./utils-text";
+@import "./utils-color";
+@import "./utils-size";
+@import "./utils-border";
+@import "./utils-spacing";
+
+#root {
+  height: 100%;
+}
+
+.ant-layout {
+  overflow: auto;
+  height: 100%;
+
+  .logo {
+    height: 42px;
+    border-radius: 6px;
+    margin: 9.5px 15px;
+    background: url("../assets/image/common/logo_white.png") center no-repeat;
+    background-size: contain;
+  }
+
+  .logo-s {
+    background: url("../assets/image/common/logo_square.png") center center no-repeat;
+    background-size: contain;
+  }
+
+  .ant-layout-sider-collapsed {
+    .anticon {
+      font-size: 16px;
+    }
+
+    .nav-text {
+      display: none;
+    }
+
+    .ant-menu-submenu-vertical > .ant-menu-submenu-title:after {
+      display: none;
+    }
+  }
+
+  .ant-layout-sider-children {
+    .anticon {
+      font-size: 16px;
+    }
+
+    .ant-menu-inline-collapsed {
+      .anticon {
+        font-size: 18px !important;
+      }
+    }
+  }
+
+  .ant-menu-submenu-title {
+    .avatar {
+      width: 40px;
+      height: 40px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+      }
+    }
+  }
+
+  p {
+    margin: 10px 0 10px 0;
+  }
+}
+
+.gutter-example {
+  .ant-row {
+    //margin-left: 0 !important;
+    //margin-right: 0 !important;
+    > div {
+      background: transparent;
+      border: 0;
+    }
+  }
+}
+
+.gutter-box {
+  padding: 5px 0;
+}
